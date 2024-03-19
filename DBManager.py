@@ -4,13 +4,8 @@ import psycopg2
 class DBManager:
     """Класс, который подключается к БД PostgreSQL."""
     def __init__(self, params):
-        self.conn = psycopg2.connect(bdname='hhru', **params)
+        self.conn = psycopg2.connect(dbname='hhru', **params)
         self.cur = self.conn.cursor()
-
-    def get_companies_and_vacancies_count(self):
-        """
-        получает список всех компаний и количество вакансий у каждой компании
-        """
 
     def get_companies_and_vacancies_count(self):
         """
